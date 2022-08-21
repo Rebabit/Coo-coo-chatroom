@@ -1,0 +1,47 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>system/img/add.png</file>
+        <file>system/img/addBlue.png</file>
+        <file>system/img/addOff.png</file>
+        <file>system/img/addOn.png</file>
+        <file>system/img/addOnFinal.png</file>
+        <file>system/img/bicBackground.png</file>
+        <file>system/img/bicq.png</file>
+        <file>system/img/bicqBlue.png</file>
+        <file>system/img/bicqGreen.png</file>
+        <file>system/img/bicqWhite.png</file>
+        <file>system/img/dot.png</file>
+        <file>system/img/dotRed.png</file>
+        <file>system/img/face.png</file>
+        <file>system/img/friend.png</file>
+        <file>system/img/git.png</file>
+        <file>system/img/gitBtnOff.png</file>
+        <file>system/img/gitBtnOn.png</file>
+        <file>system/img/gitOff.png</file>
+        <file>system/img/gitOn.png</file>
+        <file>system/img/gitOnFinal.png</file>
+        <file>system/img/gitWhite.png</file>
+        <file>system/img/LittleBlack.svg</file>
+        <file>system/img/LittleBlue.svg</file>
+        <file>system/img/LittlePink.svg</file>
+        <file>system/img/LittleRed.svg</file>
+        <file>system/img/messageBlue.png</file>
+        <file>system/img/messageOff.png</file>
+        <file>system/img/messageOn.png</file>
+        <file>system/img/messageOnFinal.png</file>
+        <file>system/img/myHead.png</file>
+        <file>system/img/personal.png</file>
+        <file>system/img/personalInf.png</file>
+        <file>system/img/personalInfBlue.png</file>
+        <file>system/img/personalOff.png</file>
+        <file>system/img/personalOn.png</file>
+        <file>system/img/personalSelect.png</file>
+        <file>system/img/search.png</file>
+        <file>system/img/searchBlue.png</file>
+        <file>system/img/searchOff.png</file>
+        <file>system/img/searchOn.png</file>
+        <file>system/img/searchOnFinal.png</file>
+        <file>system/img/test.png</file>
+        <file>system/img/查询条件.png</file>
+    </qresource>
+</RCC>
