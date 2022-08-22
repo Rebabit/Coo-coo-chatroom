@@ -8,18 +8,30 @@
 class Operations : public QObject
 {
     Q_OBJECT
+    using resp = QList<QJsonObject>;
+    using Json = QJsonObject;
 
 public:
-    explicit Operations(QObject *parent() = nullptr):QObject(parent){}
-    static Operations& Singleton(QObject *parent = nullptr);
-    //QList<QJsonObject> request(QJsonObject json);
-    QList<QJsonObject> registerResponse(QJsonObject json);//注册处理
-    QList<QJsonObject> loginResponse(QJsonObject json);//登录处理
-    QList<QJsonObject> newMessageResponse(QJsonObject json);//消息处理
+    static Operations& Singleton(QObject *parent = nullptr)
+    {
+        static Operations * singleton = new Operations(parent);
+        return *singleton;
+    }
+
+    QList<QJsonObject> request(QJsonObject json);
 
 signals:
     void newMessage(int sessionId, QJsonObject msg);
 
+public:
+    explicit Operations(QObject *parent = nullptr);
+
+    QList<QJsonObject> registerResponse(QJsonObject json);
+    QList<QJsonObject> loginResponse(QJsonObject json);
+    QList<QJsonObject> newMessageResponse(QJsonObject json);
+    void addFriendResponse(QJsonObject json);
+    QList<QJsonObject> searchResponse(QJsonObject json);
+    void createGroupResponse(QJsonObject json);
 };
 
 #endif // OPERATIONS_H

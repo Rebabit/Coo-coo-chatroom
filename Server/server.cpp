@@ -5,7 +5,7 @@
 
 void Server::incomingConnection(qintptr handle)
 {
-    qDebug << "建立新连接！";
+    qDebug() << "new connection!";
     //建立新的套接字连接，初始化QTcpSocket对象
     QTcpSocket *socket = new QTcpSocket(this);
     //采用handle作为新连接的套接字描述符
@@ -43,7 +43,7 @@ void Server::setIP(QString str)
 }
 
 //处理新信息
-void Server::receiveMessage(int handle)
+void Server::receiveMessage(qintptr handle)
 {
     qDebug() << "in receive message!";
     //根据handle标识符找到接受信息的socket

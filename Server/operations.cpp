@@ -2,11 +2,13 @@
 #include "serverdatacenter.h"
 #include "databaseoperation.h"
 
-static Operations& Operations::Singleton(QObject *parent)
-{
-    static Operations *singleton = new Operations(parent);
-    return *singleton;
+Operations::Operations(QObject *parent) : QObject(parent) {
+
 }
+
+ServerDataCenter& dcenter = ServerDataCenter::Singleton();
+using resp = QList<QJsonObject>;
+using Json = QJsonObject;
 
 //登录操作
 QList<QJsonObject> Operations::loginResponse(QJsonObject json)
@@ -31,13 +33,13 @@ QList<QJsonObject> Operations::loginResponse(QJsonObject json)
     response["Profile"] = user.getProfile();
 
     //用户所有会话列表
-    auto sessionlist = db.querySessionByMember(username.toUtf8().data());
+    auto sessionlist = db.querySessionsByMember(username.toUtf8().data());
     for (int i = 0; i < sessionlist.size(); i++)
     {
-        //会话基本信息
-        ret.append(dcenter.getSession(ssid).generateJsonFromData());
         //会话的成员信息
         int ssid = sessionlist.at(i);
+        //会话基本信息
+        ret.append(dcenter.getSession(ssid).generateJsonFromData());
         auto userlist = db.queryMembersBySession(ssid);
         for (int j = 0; j < userlist.size(); j++)
         {
@@ -52,8 +54,8 @@ QList<QJsonObject> Operations::loginResponse(QJsonObject json)
         {
             try{
                 ret.append(dcenter.getMessage(ssid,msglist[j]).generateJsonOutput());
-            }catch(...)
-            qDebug() << "fatal error";
+            }catch(...){
+            qDebug() << "fatal error";}
         }
         ret.append(dcenter.getSession(sessionlist.at(i)).generateJsonFromData());
     }
@@ -99,4 +101,85 @@ QList<QJsonObject> Operations::newMessageResponse(QJsonObject json)
     json["MessageID"] = msgID;
     emit newMessage(sessionID, json);
     return QList<QJsonObject>();
+}
+
+void Operations::addFriendResponse(QJsonObject json)
+{
+    // get the two users
+    DatabaseOperation & db = DatabaseOperation::Singleton();
+    ServerDataCenter& dcenter = ServerDataCenter::Singleton();
+    QString from = json["FromUserName"].toString();
+    QString to = json["ToUserName"].toString();
+    OnlineUserModel& fromUser = dcenter.getUser(from);
+    OnlineUserModel& toUser = dcenter.getUser(to);
+
+    // check if these two users are already friends.
+    auto sessionlist = db.querySessionsByMember(from.toUtf8().data());
+    for(int i=0;i<sessionlist.size();i++)
+    {
+        auto &session = dcenter.getSession(sessionlist[i]);
+        auto &members = session.getMembers();
+        for(int j=0;j<members.size();j++)
+        {
+            if(members[j] == to && session.getSessionType() == AbstractSession::SessionType::FRIEND)
+            {
+                return;
+            }
+        }
+    }
+
+    // if not, then insert into database
+    int id = db.insertSessionBasicInfo("FRIEND", QJsonObject({{"LatestMessageID", 0}, {"SessionName", "None"}}));
+    db.insertMember(id, fromUser);
+    db.insertMember(id, toUser);
+
+    auto response = dcenter.getSession(id).generateJsonFromData();
+
+    emit newMessage(id, response);
+    return;
+}
+
+QList<QJsonObject> Operations::searchResponse(QJsonObject json)
+{
+    DatabaseOperation &db = DatabaseOperation::Singleton();
+    ServerDataCenter &datacenter = ServerDataCenter::Singleton();
+    QString query = json["SearchInfo"].toString();
+
+    // find in database
+    QList<QString> result = db.findFriend(query);
+    QJsonObject response = {{ "MsgType", "SearchInfo" }};
+    QJsonArray array;
+
+    // pick result into response
+    for (int i = 0; i < result.size(); i++)
+    {
+        array.append(QJsonObject({
+                                     {"Username", result[i]},
+                                     {"Nickname", datacenter.getUser(result[i]).getNickname()}
+                                 }));
+    }
+    response["SearchInfo"] = array;
+    return {response};
+}
+
+void Operations::createGroupResponse(QJsonObject json)
+{
+    DatabaseOperation &db = DatabaseOperation::Singleton();
+    ServerDataCenter &dataCenter = ServerDataCenter::Singleton();
+
+    // get information of the new group
+    QString sessionName = json["SessionName"].toString();
+    QJsonArray array = json["Members"].toArray();
+    int id = db.insertSessionBasicInfo("GROUP",  QJsonObject({{"LatestMessageID", 0}, {"SessionName", sessionName}}));
+
+    // insert members of group to database
+    for (int i = 0; i < array.size(); i++)
+    {
+        QString userName = array[i].toObject()["username"].toString();
+        db.insertMember(id, dataCenter.getUser(userName));
+    }
+
+    QJsonObject response = dataCenter.getSession(id).generateJsonFromData();
+    emit newMessage(id, response);
+    return;
 }

@@ -26,7 +26,7 @@ public slots:
     void setIP(QString);
 signals:
     void linkMsg(QString);
-    void sendMsg(QList<QJssonObject>, int);
+    void sendMsg(QList<QJsonObject>, int);
     void ready_Read(qintptr);
     void sendChannel(int);
     void offLine(int);
