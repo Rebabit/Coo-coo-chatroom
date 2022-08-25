@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UserRegister</class>
+ <widget class="QWidget" name="UserRegister">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>425</width>
+    <height>801</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>425</width>
+    <height>801</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>425</width>
+    <height>801</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="QLabel_backGroundPixMap">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>425</width>
+     <height>801</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>425</width>
+     <height>797</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>425</width>
+     <height>801</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="res.qrc">:/new/prefix1/Register Section.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnRegister">
+   <property name="geometry">
+    <rect>
+     <x>35</x>
+     <y>630</y>
+     <width>354</width>
+     <height>58</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>51</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>-1</pointsize>
+     <weight>87</weight>
+     <italic>false</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Rectangle 2 */
+QPushButton{
+position: absolute;
+width: 354px;
+height: 58px;
+left: 37px;
+top: 598px;
+
+
+background-color: rgb(25, 184, 185);
+border:0px solid ;
+border-radius: 15px;
+padding:10px;
+
+
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+}
+
+QPushButton:hover{
+	border: 0px solid;
+	background:rgb(80, 222, 212);
+}
+
+
+
+
+
+
+
+
+
+</string>
+   </property>
+   <property name="text">
+    <string>Sign Up</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Back">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>742</y>
+     <width>71</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>51</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>-1</pointsize>
+     <weight>87</weight>
+     <italic>false</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* SIGN IN */
+
+
+
+
+
+
+
+
+QPushButton{
+/* SIGN IN */
+
+background:transparent;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 21px;
+/* identical to box height */
+
+
+color: #E1F6F4;
+
+
+}
+
+QPushButton:hover{
+
+color:rgb(255, 255, 255);
+font-size: 18px;
+}
+
+QPushButton:pressed{
+font-size:16px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>SIGN IN</string>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lERgUserName">
+   <property name="geometry">
+    <rect>
+     <x>35</x>
+     <y>290</y>
+     <width>354</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border-top:0px  solid;border-bottom:2px  groove rgb(119, 117, 117);border-left:0px  solid;border-right: 0px  solid;
+background:transparent;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 21px;
+/* identical to box height */
+
+color: #696767;
+}
+
+QLineEdit:focus{
+
+border-bottom:
+2px  groove  rgba(255, 255, 255, 0);
+
+
+color:rgb(51, 153, 153);
+}
+
+QLineEdit:flat{
+border: 0px;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Username</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lERgNickName">
+   <property name="geometry">
+    <rect>
+     <x>35</x>
+     <y>367</y>
+     <width>354</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border-top:0px  solid;border-bottom:2px  groove rgb(119, 117, 117);border-left:0px  solid;border-right: 0px  solid;
+background:transparent;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 21px;
+/* identical to box height */
+
+color: #696767;
+}
+
+QLineEdit:focus{
+
+border-bottom:
+2px  groove  rgba(255, 255, 255, 0);
+
+
+color:rgb(51, 153, 153);
+}
+
+QLineEdit:flat{
+border: 0px;
+}</string>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Normal</enum>
+   </property>
+   <property name="placeholderText">
+    <string>Nickname</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lERgPassword2">
+   <property name="geometry">
+    <rect>
+     <x>35</x>
+     <y>450</y>
+     <width>354</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border-top:0px  solid;border-bottom:2px  groove rgb(119, 117, 117);border-left:0px  solid;border-right: 0px  solid;
+background:transparent;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 21px;
+/* identical to box height */
+
+color: #696767;
+}
+
+QLineEdit:focus{
+
+border-bottom:
+2px  groove  rgba(255, 255, 255, 0);
+
+
+color:rgb(51, 153, 153);
+}
+
+QLineEdit:flat{
+border: 0px;
+}</string>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+   <property name="placeholderText">
+    <string>Password</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lERgPassword1">
+   <property name="geometry">
+    <rect>
+     <x>35</x>
+     <y>527</y>
+     <width>354</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border-top:0px  solid;border-bottom:2px  groove rgb(119, 117, 117);border-left:0px  solid;border-right: 0px  solid;
+background:transparent;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 21px;
+/* identical to box height */
+
+color: #696767;
+}
+
+QLineEdit:focus{
+
+border-bottom:
+2px  groove  rgba(255, 255, 255, 0);
+
+
+color:rgb(51, 153, 153);
+}
+
+QLineEdit:flat{
+border: 0px;
+}</string>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+   <property name="placeholderText">
+    <string>Confirm Password</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>760</y>
+     <width>211</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Already have an account? */
+
+position: absolute;
+width: 205px;
+height: 21px;
+left: 58px;
+top: 759px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Already have an account?  </string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

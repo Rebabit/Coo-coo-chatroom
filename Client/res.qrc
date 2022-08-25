@@ -1,0 +1,91 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>system/img/add.png</file>
+        <file>system/img/addBlue.png</file>
+        <file>system/img/addOff.png</file>
+        <file>system/img/addOn.png</file>
+        <file>system/img/addOnFinal.png</file>
+        <file>system/img/bicBackground.png</file>
+        <file>system/img/bicq.png</file>
+        <file>system/img/bicqBlue.png</file>
+        <file>system/img/bicqGreen.png</file>
+        <file>system/img/bicqWhite.png</file>
+        <file>system/img/dot.png</file>
+        <file>system/img/dotRed.png</file>
+        <file>system/img/face.png</file>
+        <file>system/img/friend.png</file>
+        <file>system/img/git.png</file>
+        <file>system/img/gitBtnOff.png</file>
+        <file>system/img/gitBtnOn.png</file>
+        <file>system/img/gitOff.png</file>
+        <file>system/img/gitOn.png</file>
+        <file>system/img/gitOnFinal.png</file>
+        <file>system/img/gitWhite.png</file>
+        <file>system/img/LittleBlack.svg</file>
+        <file>system/img/LittleBlue.svg</file>
+        <file>system/img/LittlePink.svg</file>
+        <file>system/img/LittleRed.svg</file>
+        <file>system/img/messageBlue.png</file>
+        <file>system/img/messageOff.png</file>
+        <file>system/img/messageOn.png</file>
+        <file>system/img/messageOnFinal.png</file>
+        <file>system/img/myHead.png</file>
+        <file>system/img/personal.png</file>
+        <file>system/img/personalInf.png</file>
+        <file>system/img/personalInfBlue.png</file>
+        <file>system/img/personalOff.png</file>
+        <file>system/img/personalOn.png</file>
+        <file>system/img/personalSelect.png</file>
+        <file>system/img/search.png</file>
+        <file>system/img/searchBlue.png</file>
+        <file>system/img/searchOff.png</file>
+        <file>system/img/searchOn.png</file>
+        <file>system/img/searchOnFinal.png</file>
+        <file>system/img/test.png</file>
+        <file>system/img/查询条件.png</file>
+        <file>AddGroup.png</file>
+        <file>AddFriend.png</file>
+        <file>add friend 1.png</file>
+        <file>Resources/2.png</file>
+    </qresource>
+    <qresource prefix="/new/prefix1">
+        <file>Login Section.png</file>
+        <file>Register Section.png</file>
+        <file>NavigationBarBackground.png</file>
+        <file>Vector-2.png</file>
+        <file>Group.png</file>
+        <file>add friend 1.png</file>
+        <file>icons8-用户组2-96 1.png</file>
+        <file>Vector-3.png</file>
+        <file>NaviBtnSelectedBackground.png</file>
+        <file>SelfPictureBox_White.png</file>
+        <file>NavigationBarBackGroungWhite.png</file>
+        <file>homepage.png</file>
+        <file>NewFriendPage_corner.png</file>
+        <file>NewFriendPage_right.png</file>
+        <file>NewFriendPage_left.png</file>
+        <file>NewFriendPage_right_alphaBackground.png</file>
+        <file>HomePage_SearchButton.png</file>
+        <file>1e7603ac0bbf7a393db26e353eaf29cf.jpeg</file>
+    </qresource>
+    <qresource prefix="/new/mainWindow_ChatPage">
+        <file>Groups_backGround.png</file>
+        <file>Friends_background.png</file>
+        <file>Groups_background_fixed.png</file>
+        <file>Home_page_Chat.png</file>
+        <file>icon_emoji.png</file>
+        <file>icon_sendPicture.png</file>
+        <file>icon_sendMessage.png</file>
+        <file>icon_sendbtn.png</file>
+        <file>Group.png</file>
+        <file>Rectangle 331.1.png</file>
+    </qresource>
+    <qresource prefix="/new/prefix2">
+        <file>Group 3601pop.png</file>
+        <file>folder.png</file>
+        <file>shaker.png</file>
+        <file>icons8-编辑图像-96 5.png</file>
+        <file>Rectangle 362.png</file>
+        <file>Resources/background.png</file>
+    </qresource>
+</RCC>
