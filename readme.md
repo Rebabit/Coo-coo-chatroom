@@ -4,9 +4,9 @@
 
 <img src="img/project introduction.png" alt="project introduction" style="zoom:67%;" />
 
-### UI Display
+### UI Design
 
-<img src="img/UI display.png" alt="UI display" style="zoom: 50%;" />
+<img src="img/UI Design.png" alt="UI display" style="zoom: 50%;" />
 
 
 
